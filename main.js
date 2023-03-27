@@ -91,3 +91,12 @@ if (localStorage.getItem("history")) {
   const history = JSON.parse(localStorage.getItem("history"));
   displayHistory(history);
 }
+
+const resetBtn = document.getElementById("reset-btn");
+
+// Add event listener to reset button
+resetBtn.addEventListener("click", () => {
+  localStorage.removeItem("history");
+  historyList.innerHTML = "";
+});
+
