@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter App Using JavaScript</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" integrity="sha384-bas/x+Za1J2CkxPuSLL1hYz7DzbHQOktNz7N2qw+f+w41ej7V5yo5/5r7I5FbDT9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js" integrity="sha384-Cx/qxS+ybQk0/8dTCf/92FJ4G4Lsdhng1CjwN+OXXOJbmhSze2jqPzB0czSG2ewh" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -22,13 +24,21 @@
       <button class="btn" id="btn">Convert</button>
     </div>
     <div>
-    <h2>Historial de conversiones</h2>
+      <h2>Historial de conversiones</h2>
+      <div>
+        <select id="history-filter">
+          <option value="all">Mostrar todo</option>
+          <option value="usd-to-eur">USD a EUR</option>
+          <option value="eur-to-usd">EUR a USD</option>
+          <option value="usd-to-jpy">USD a JPY</option>
+          <option value="jpy-to-usd">JPY a USD</option>
+        </select>
+        <button id="history-order-by-date">Ordenar por fecha</button>
+        <button id="history-order-by-amount">Ordenar por cantidad</button>
+      </div>
       <ul id="history-list"></ul>
+      <button id="reset-btn">Reset History</button>
     </div>
-    <div>
-    <button id="reset-btn">Reset History</button>
-  </div>
-
     <script src="main.js"></script>
   </body>
 </html>

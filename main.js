@@ -100,3 +100,6 @@ resetBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
 
+// Código Javascript a agregar
+const darkModeSwitch = document.getElementById("dark-mode-switch");
+dark
